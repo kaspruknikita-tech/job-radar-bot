@@ -1,0 +1,43 @@
+# Секреты
+.env
+google_credentials.json
+
+# База данных
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Poetry
+.venv/
+
+# Mac
+.DS_Store
+
+# Экспорты
+*.csv
+
+# Мусор/отладка
+*.save
+*_debug.png
+debug_*.py
+
+# Инструменты графа
+graphify-out/
+.codegraph/
+
+# Локальное окружение агента
+.claude/
+.agents/
+
+# Побочные проекты и старый вложенный клон (не часть бота)
+ux-jobs-bot-course/
+research-ux-jobs/
+
+# Артефакт uv — проект на poetry
+uv.lock
+
+# Личные карьерные данные для ATS-совпадения — не публиковать
+profile/career/

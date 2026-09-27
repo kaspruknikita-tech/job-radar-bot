@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "job-radar-bot"
+version = "0.1.0"
+description = "Telegram-бот: собирает вакансии из 20+ источников (hh.ru, Хабр Карьера, Telegram, LinkedIn…) и оценивает под ваш профиль"
+authors = ["job-radar-bot contributors"]
+readme = "README.md"
+packages = [{include = "parsers"}, {include = "filters"}, {include = "bot"}, {include = "scoring"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+python-telegram-bot = "^21.3"
+requests = "^2.32"
+APScheduler = "^3.10"
+python-dotenv = "^1.0"
+gspread = "^6.2.1"
+psycopg2-binary = "^2.9"
+beautifulsoup4 = ">=4.12"
+telethon = "^1.36"
+langdetect = "^1.0.9"
+openai = ">=1.0"
+pydantic = ">=2.0"
+playwright = ">=1.44"
+python-jobspy = ">=1.1.80"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5"
+pytest = "^8.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

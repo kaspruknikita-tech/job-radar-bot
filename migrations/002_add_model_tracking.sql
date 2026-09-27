@@ -1,0 +1,2 @@
+ALTER TABLE vacancy_scores ADD COLUMN IF NOT EXISTS model_used TEXT;
+ALTER TABLE vacancy_scores ADD COLUMN IF NOT EXISTS latency_ms INTEGER;
