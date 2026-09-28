@@ -59,8 +59,9 @@ def _gc():
     else:
         gc = gspread.service_account(filename=config.GOOGLE_CREDENTIALS_FILE)
     # По умолчанию gspread ждёт ответа вечно: после сна Mac SSL_read повис на 36 часов
-    # и держал цикл вместе с отправкой карточек.
-    gc.http_client.set_timeout((10, 60))
+    # и держал цикл вместе с отправкой карточек. Одно число, не пара: google-auth из пары
+    # берёт меньшее, и (10, 60) обрывал запросы через 10 с, а через VPN Sheets отвечает ~15 с.
+    gc.http_client.set_timeout(120)
     return gc
 
 
